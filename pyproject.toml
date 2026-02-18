@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "synauth"
-version = "0.1.1"
+version = "0.1.2"
 description = "SynAuth SDK — Biometric approval for AI agent actions via Face ID"
 readme = "README.md"
 license = "MIT"

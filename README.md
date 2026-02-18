@@ -8,6 +8,12 @@ Python SDK for AI agents to request biometric-approved actions. Every sensitive 
 pip install synauth
 ```
 
+## Setup
+
+1. **Get the SynAuth iOS app** from the App Store. Create an account.
+2. **Copy your API key** from the app — it starts with `aa_`.
+3. **(Optional) Store credentials in the vault** — add your API keys (OpenAI, GitHub, Stripe, etc.) in the Vault tab. This lets agents use these services without ever seeing the keys.
+
 ## Quick Start
 
 ```python
@@ -160,6 +166,18 @@ result = client.request_action(
 )
 # SynAuth will POST to callback_url when the user approves or denies
 ```
+
+## Action Types
+
+| Type | Examples | Default Risk |
+|------|----------|-------------|
+| `communication` | Emails, messages, notifications | low |
+| `purchase` | Buying, subscriptions, payments | medium |
+| `scheduling` | Bookings, reservations, calendar | low |
+| `legal` | Contracts, terms, agreements | critical |
+| `data_access` | Database queries, file downloads | high |
+| `social` | Social media posts, profile updates | medium |
+| `system` | Config changes, restarts, deployments | high |
 
 ## Configuration
 
